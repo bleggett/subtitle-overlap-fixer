@@ -1,7 +1,7 @@
 # subtitle-overlap-fixer
 Corrects issues with SRT subtitle files that have been converted from more complex WebVTT format subtitles
 
-Stolen from @nimatrueway's Gist (https://gist.github.com/nimatrueway/4589700f49c691e5413c5b2df4d02f4f) and slightly enhanced for my needs.
+Stolen from @nimatrueway's Gist (https://gist.github.com/nimatrueway/4589700f49c691e5413c5b2df4d02f4f) and slightly enhanced for my needs (mostly by adding the functionality to combine lines with overlapping timecodes)
 
 ### Problem
 Converting WebVTT subtitles to SRT subtitles via ffmpeg like so: `ffmpeg -i yourvttsub.vtt outputsrt.srt` _mostly_ works,
