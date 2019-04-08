@@ -101,7 +101,7 @@ func main() {
 
 	scanner := bufio.NewScanner(file)
 	var newIdx = 1
-	var lastSubtitle *Subtitle = nil
+	var lastSubtitle *Subtitle
 
 	for {
 		subtitle, err := readOneSubtitle(scanner)
@@ -132,10 +132,6 @@ func main() {
 				if currentLines[0] == lastLines[len(lastLines)-1] {
 					subtitle.text = strings.Join(currentLines[1:], "\n")
 				}
-				// // if first-line of current subtitle is repeating last-line of previous-subtitle remove it
-				// if subtitle.fromTime < lastSubtitle.toTime {
-				// 	lastSubtitle.toTime = subtitle.fromTime - time.Millisecond
-				// }
 			}
 			//TODO handle returned error
 			writeOneSubtitle(newFile, lastSubtitle, &newIdx)
