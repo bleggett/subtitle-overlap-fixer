@@ -9,7 +9,7 @@ but since WebVTT supports many more timing and layout options than SRT, and `ffm
 
 This tiny program attemps to fix those issues.
 
-What it do:
+### What it do
 - Removes empty subtitles
 - Combines subtitles if the end-time of the previous subtitle overlaps with the start-time of the current subtitle.
 - Removes subtitles with very very short duration (<150ms) if they contain what the previous line contains
