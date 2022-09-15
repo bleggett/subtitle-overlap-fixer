@@ -80,7 +80,7 @@ func writeOneSubtitle(file io.Writer, subtitle *Subtitle, idx *int) error {
 	_, err := fmt.Fprint(file,
 		*idx, "\n",
 		printDuration(subtitle.fromTime), " --> ", printDuration(subtitle.toTime), "\n",
-		subtitle.text, "\n\n")
+			     strings.TrimSpace(subtitle.text), "\n\n")
 	*idx++
 	return err
 }
